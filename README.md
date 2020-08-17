@@ -6,4 +6,5 @@
 3. bbr.sh #安装google bbr加速
 4. tcp.sh #安装bbr加速魔改版
 5. parse_conf.py #解析ini文件，并替换配置文件
+6. v2ray_ws_tls1.3.sh #安装v2ray+nginx+ssl
 ```
