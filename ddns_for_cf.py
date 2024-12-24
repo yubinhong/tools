@@ -10,12 +10,12 @@ RECORD_ID = "<your_record_id>"  # 替换为你的 DNS 记录 ID
 RECORD_NAME = "example.com"  # 替换为你的域名
 RECORD_TYPE = "A"  # 记录类型 (一般是 A 或 AAAA)
 
-# 获取当前公网 IP
+# 获取当前公网 IPv4 地址
 def get_public_ip():
     try:
-        response = requests.get("https://api.ipify.org?format=json")
+        response = requests.get("http://ifconfig.me/ip")
         response.raise_for_status()
-        return response.json().get("ip")
+        return response.text.strip()
     except requests.RequestException as e:
         print(f"获取公网 IP 失败: {e}")
         return None
